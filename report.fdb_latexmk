@@ -1,10 +1,10 @@
 # Fdb version 3
-["dvipdf"] 1586062497 "report.dvi" "report.pdf" "report" 1586062498
-  "report.dvi" 1586062497 2076 82d1b26278937329a8719ed4e0bdf7eb "latex"
+["dvipdf"] 1586085638 "report.dvi" "report.pdf" "report" 1586085639
+  "report.dvi" 1586085638 4660 f6cf550e62898aed3b0290e4b5497126 "latex"
   (generated)
   "report.pdf"
-["latex"] 1586062496 "/Users/tdryoji/Documents/Beta-Gamma/report.tex" "report.dvi" "report" 1586062498
-  "/Users/tdryoji/Documents/Beta-Gamma/report.tex" 1586062496 1241 c2395c58b7112562d0455fd04e5eb8c4 ""
+["latex"] 1586085637 "/Users/tdryoji/Documents/Beta-Gamma/report.tex" "report.dvi" "report" 1586085639
+  "/Users/tdryoji/Documents/Beta-Gamma/report.tex" 1586085636 2672 4c4a1796ddb825d209263c5cc98e7773 ""
   "/usr/local/texlive/2019basic/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/local/texlive/2019basic/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/local/texlive/2019basic/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -37,6 +37,7 @@
   "/usr/local/texlive/2019basic/texmf-dist/fonts/tfm/public/cm/cmr17.tfm" 1136768653 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "/usr/local/texlive/2019basic/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1136768653 1300 b62933e007d01cfd073f79b963c01526 ""
   "/usr/local/texlive/2019basic/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1136768653 1292 21c1c5bfeaebccffdb478fd231a0997d ""
+  "/usr/local/texlive/2019basic/texmf-dist/fonts/tfm/public/cm/cmr9.tfm" 1136768653 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
   "/usr/local/texlive/2019basic/texmf-dist/fonts/tfm/public/cm/cmss12.tfm" 1136768653 1324 37b971caf729d7edd9cbb9f9b0ea76eb ""
   "/usr/local/texlive/2019basic/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/local/texlive/2019basic/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
@@ -140,8 +141,9 @@
   "/usr/local/texlive/2019basic/texmf-dist/web2c/texmf.cnf" 1583018212 39451 6c50cbbc48279cc2d67f72e32ca48ad5 ""
   "/usr/local/texlive/2019basic/texmf-var/web2c/euptex/uplatex.fmt" 1585746444 9462143 c43b7f7e9f890e20ff276cb566a0464d ""
   "/usr/local/texlive/2019basic/texmf.cnf" 1570846878 628 6cfff46d1fd9ae1d47a88551035aa162 ""
-  "report.aux" 1586062497 842 cbce80042f5e91d370d101190fe2a23d "latex"
-  "report.tex" 1586062496 1241 c2395c58b7112562d0455fd04e5eb8c4 ""
+  "gamma.png" 1586072930 12664 862df210a8a4e21f5d3f5ce67db31084 ""
+  "report.aux" 1586085638 999 04f9a1e309b9e8f6fa12e31fb2d9134e "latex"
+  "report.tex" 1586085636 2672 4c4a1796ddb825d209263c5cc98e7773 ""
   (generated)
   "report.log"
   "report.dvi"
