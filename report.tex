@@ -17,7 +17,7 @@
 \date{\today}
 \maketitle
 
-自分の\LaTeX の練習も兼ね, 有名な関数であるガンマ関数とベータ関数についてまとめました. それぞれ階乗とコンビネーションを正の実数で一般化したものに相当します（実際にはガンマ関数は実部が正の複素数で定義されます）が, その事実がどのようにして導出できるのかをここでは扱います.
+自分の\LaTeX の練習も兼ね, 有名な関数であるガンマ関数とベータ関数についてまとめました. それぞれ階乗とコンビネーションを正の実数で一般化したものに相当します（実際には実部が正の複素数で定義されます）が, その事実がどのようにして導出できるのかをここでは扱います. 定義や性質については高校数学の知識があれば理解は出来ると思いますが, 最後に触れるガンマ関数とベータ関数の間に成り立つ関係式を導出する際には, 二変数関数の積分の変数変換について知識が必要になります。
 
 \section{ガンマ関数}
 \subsection{定義}
@@ -25,7 +25,7 @@
 \[
   \Gamma(x) = \int_0^\infty t^{x-1}\mathrm{e}^{-t} dt
 \]
-をガンマ関数と呼ぶ. グラフは図\ref{fig:gamma}のようになる.
+をガンマ関数と呼ぶ. グラフは図~\ref{fig:gamma}のようになる.
 \begin{figure}
     \begin{center}
         \includegraphics[clip, width=5cm]{gamma.png}
@@ -38,7 +38,7 @@
 任意の正整数$n$に対し, 次の式が成り立つ.
 \[
     \Gamma(n+1) = n!
-\]
+\] \\
 (証明)
 \[
     \Gamma(1) = \int_0^\infty \mathrm{e}^{-t} dt = \lim_{x \to \infty} [-\mathrm{e}^{-t}]_0^x = 1 = 0!
@@ -49,12 +49,70 @@
     & = & \lim_{x \to \infty}[-t^{n-1}\mathrm{e}^{-t}]_0^x + (n-1)\int_0^\infty t^{n-2}\mathrm{e}^{-t} dt \\
     & = & 0 + (n-1)\Gamma(n-1) 
 \end{eqnarray*}
-よって, ~$\Gamma(n+1) = n\Gamma(n) = n!\Gamma(1) = n!$
+よって, ~$\Gamma(n+1) = n\Gamma(n) = n!\Gamma(1) = n!$. \\
 
 \section{ベータ関数}
 \subsection{定義}
-\subsection{$x, y$ が自然数であるとき}
-\subsection{ガンマ関数との関係}
+正の実数$x, y$について, 次の積分で定義される関数
+\[
+    B(x, y) = \int_0^1 t^{x-1}(1-t)^{y-1} dt
+\]
+をベータ関数と呼ぶ. \\
+
+\subsection{積分公式}
+$m, n$が正整数であるとき, 以下の等式が成り立つ.
+\begin{equation}
+    B(m, n) = \frac{(m-1)!(n-1)!}{(m+n-1)!}
+    \label{eq:b1}
+\end{equation} \\
+
+(証明) \\
+$n = 1$のときは, $m = 1$で
+\[
+    B(1, 1) = \int_0^1 dt = 1
+\] \\
+$m > 1$で
+\[
+    B(m, 1) = \int_0^1 t^{m-1} dt = \left[\frac{t^m}{m}\right]_0^1 = \frac{1}{m} = \frac{(m-1)!}{m!}
+\]
+より成り立つ. \\
+$n > 1$のとき, 
+\begin{eqnarray*}
+    B(m, n) & = & \left[\frac{t^m}{m}(1-t)^{n-1}\right]_0^1 + \int_0^1 \frac{t^m}{m}(n-1)(1-t)^{n-2} dt \\
+    & = & \frac{n-1}{m}B(m+1, n-1)
+    = \frac{n-1}{m}\cdot\frac{n-2}{m+1}B(m+2, n-2) = \cdots \\
+    & = & \frac{(n-1)(n-2)\cdots 1}{m(m+1)\cdots(m+n-2)}B(m+n-1, 1) \\
+    & = & \frac{(m-1)!(n-1)!}{(m+n-2)!}\cdot\frac{1}{(m+n-1)}\\
+    & = & \frac{(m-1)!(n-1)!}{(m+n-1)!}
+\end{eqnarray*}
+より, 式~(\ref{eq:b1})は示された. \\
+
+また非負整数$p, q$と実数$\alpha, \beta(\alpha < \beta)$に対し, 以下の等式が成立する.
+\begin{equation}
+    \int_{\alpha}^{\beta}(x-\alpha)^{p}(\beta-x)^{q} dx = \frac{p!q!}{(p+q+1)!}(\beta-\alpha)^{p+q+1}
+    \label{eq:b2}
+\end{equation} \\
+
+(証明) \\
+式~(\ref{eq:b1})より
+\[
+    B(p+1, q+1) = \int_0^1 t^p(1-t)^q dt = \frac{p!q!}{(p+q+1)!}
+\]
+また式~(\ref{eq:b2})に対して$x = (\beta - \alpha)t + \alpha$と置換すると, $dx = (\beta - \alpha)dt$,~$x:\alpha \to \beta$で$t:0 \to 1$だから
+\begin{eqnarray*}
+    \int_{\alpha}^{\beta}(x-\alpha)^{p}(\beta-x)^{q} dx
+    & = & \int_0^1 \{(\beta - \alpha)t\}^p\{(\beta - \alpha)(1-t)\}^q \cdot (\beta - \alpha)dt \\
+    & = & (\beta - \alpha)^{p+q+1} \cdot B(p+1, q+1) \\
+    & = & \frac{p!q!}{(p+q+1)!}(\beta-\alpha)^{p+q+1}
+\end{eqnarray*}
+より, 式~(\ref{eq:b2})は示された. \\\\
+
+(参考)
+\[
+    \int_\alpha^\beta (x - \alpha)(x - \beta) dx = -\frac{1}{6}(\beta - \alpha)^3,~~ \int_\alpha^\beta (x - \alpha)^2(x - \beta) dx = \frac{1}{12}(\beta - \alpha)^4
+\] \\
+
+
 
 \begin{thebibliography}{9}
     \bibitem{mathtrain-ガンマ}
