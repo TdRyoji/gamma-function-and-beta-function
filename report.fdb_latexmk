@@ -1,10 +1,11 @@
 # Fdb version 3
-["dvipdf"] 1586141321 "report.dvi" "report.pdf" "report" 1586141322
-  "report.dvi" 1586141321 9344 d1f26b1d8a4798e628da54eaaa6be948 "latex"
+["dvipdf"] 1586150348 "report.dvi" "report.pdf" "report" 1586150350
+  "report.dvi" 1586150348 14204 70e9330aba80344558ab1a8b69f0566a "latex"
   (generated)
   "report.pdf"
-["latex"] 1586141321 "/Users/tdryoji/Documents/Beta-Gamma/report.tex" "report.dvi" "report" 1586141322
-  "/Users/tdryoji/Documents/Beta-Gamma/report.tex" 1586141319 5012 8d6b267281080f0ffe024892bd9e65d8 ""
+["latex"] 1586150347 "/Users/tdryoji/Documents/Beta-Gamma/report.tex" "report.dvi" "report" 1586150350
+  "/Users/tdryoji/Documents/Beta-Gamma/report.tex" 1586150347 7685 c478d15b082971e43fdb72b9306e200b ""
+  "/usr/local/texlive/2019basic/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/local/texlive/2019basic/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/local/texlive/2019basic/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/local/texlive/2019basic/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -107,6 +108,7 @@
   "/usr/local/texlive/2019basic/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex" 1576793519 28309 488ccc6c701bbdd1bf671f708757aa5c ""
   "/usr/local/texlive/2019basic/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def" 1562964315 6286 1bd76fc45da9929ab2a64f51cba3ab6f ""
   "/usr/local/texlive/2019basic/texmf-dist/tex/latex/amsfonts/amsfonts.sty" 1359763108 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
+  "/usr/local/texlive/2019basic/texmf-dist/tex/latex/amsfonts/amssymb.sty" 1359763108 13829 94730e64147574077f8ecfea9bb69af4 ""
   "/usr/local/texlive/2019basic/texmf-dist/tex/latex/amsfonts/umsa.fd" 1359763108 961 6518c6525a34feb5e8250ffa91731cff ""
   "/usr/local/texlive/2019basic/texmf-dist/tex/latex/amsfonts/umsb.fd" 1359763108 961 d02606146ba5601b5645f987c92e6193 ""
   "/usr/local/texlive/2019basic/texmf-dist/tex/latex/amsmath/amsbsy.sty" 1523134290 2211 ca7ce284ab93c8eecdc6029dc5ccbd73 ""
@@ -142,8 +144,8 @@
   "/usr/local/texlive/2019basic/texmf-var/web2c/euptex/uplatex.fmt" 1585746444 9462143 c43b7f7e9f890e20ff276cb566a0464d ""
   "/usr/local/texlive/2019basic/texmf.cnf" 1570846878 628 6cfff46d1fd9ae1d47a88551035aa162 ""
   "gamma.png" 1586072930 12664 862df210a8a4e21f5d3f5ce67db31084 ""
-  "report.aux" 1586141321 1027 9c9efea620a855a3ff99282754c76e0b "latex"
-  "report.tex" 1586141319 5012 8d6b267281080f0ffe024892bd9e65d8 ""
+  "report.aux" 1586150348 1082 470db8857095962213101bf74726b96a "latex"
+  "report.tex" 1586150347 7685 c478d15b082971e43fdb72b9306e200b ""
   (generated)
   "report.log"
   "report.dvi"

@@ -1,7 +1,7 @@
 \documentclass[a4paper,12pt,uplatex,dvipdfmx]{jsarticle}
 
 % 数式
-\usepackage{amsmath,amsfonts}
+\usepackage{amssymb, amsmath,amsfonts}
 \usepackage{bm}
 % グラフィック
 \usepackage{graphicx}
@@ -17,7 +17,7 @@
 \date{\today}
 \maketitle
 
-自分の\LaTeX の練習も兼ね, 有名な関数であるガンマ関数とベータ関数についてまとめました. それぞれ階乗とコンビネーションを正の実数で一般化したものに相当します（実際には実部が正の複素数で定義されます）が, その事実がどのようにして導出できるのかをここでは扱います. 定義や性質については高校数学の知識があれば理解は出来ると思いますが, 最後に触れるガンマ関数とベータ関数の間に成り立つ関係式を導出する際には, 二変数関数の積分の変数変換について知識が必要になります。
+自分の\LaTeX の練習も兼ね, 有名な関数であるガンマ関数とベータ関数についてまとめました. それぞれ階乗とコンビネーションを正の実数で一般化したものに相当します（実際には実部が正の複素数で定義されます）が, その事実がどのようにして導出できるのかをここでは扱います. 定義や性質については高校数学の知識があれば理解は出来ると思いますが, 最後に触れるガンマ関数とベータ関数の間に成り立つ関係式を導出する際には, 二変数関数の積分の変数変換について知識が必要になります。\\
 
 \section{ガンマ関数}
 \subsection{定義}
@@ -26,7 +26,7 @@
   \Gamma(x) = \int_0^\infty t^{x-1}\mathrm{e}^{-t} dt
 \]
 をガンマ関数と呼ぶ. グラフは図~\ref{fig:gamma}のようになる.
-\begin{figure}
+\begin{figure}[ht]
     \begin{center}
         \includegraphics[clip, width=5cm]{gamma.png}
         \caption{ガンマ関数}
@@ -34,6 +34,7 @@
     \end{center}
 \end{figure}
 
+\newpage
 \subsection{性質：階乗の一般化}
 任意の正整数$n$に対し, 次の式が成り立つ.
 \[
@@ -49,7 +50,7 @@
     & = & \lim_{x \to \infty}[-t^{n-1}\mathrm{e}^{-t}]_0^x + (n-1)\int_0^\infty t^{n-2}\mathrm{e}^{-t} dt \\
     & = & 0 + (n-1)\Gamma(n-1) 
 \end{eqnarray*}
-よって, ~$\Gamma(n+1) = n\Gamma(n) = n!\Gamma(1) = n!$. \\
+よって,~$\Gamma(n+1) = n\Gamma(n) = n!\Gamma(1) = n!$. \\
 
 \section{ベータ関数}
 \subsection{定義}
@@ -67,7 +68,7 @@ $m, n$が正整数であるとき, 以下の等式が成り立つ.
 \end{equation} \\
 
 (証明) \\
-$n = 1$のときは, $m = 1$で
+$n = 1$のときは,~$m = 1$で
 \[
     B(1, 1) = \int_0^1 dt = 1
 \] \\
@@ -98,7 +99,7 @@ $n > 1$のとき,
 \[
     B(p+1, q+1) = \int_0^1 t^p(1-t)^q dt = \frac{p!q!}{(p+q+1)!}
 \]
-また式~(\ref{eq:b2})に対して$x = (\beta - \alpha)t + \alpha$と置換すると, $dx = (\beta - \alpha)dt$,~$x:\alpha \to \beta$で$t:0 \to 1$だから
+また式~(\ref{eq:b2})に対して$x = (\beta - \alpha)t + \alpha$と置換すると,~$dx = (\beta - \alpha)dt$,~$x:\alpha \to \beta$で$t:0 \to 1$だから
 \begin{eqnarray*}
     \int_{\alpha}^{\beta}(x-\alpha)^{p}(\beta-x)^{q} dx
     & = & \int_0^1 \{(\beta - \alpha)t\}^p\{(\beta - \alpha)(1-t)\}^q \cdot (\beta - \alpha)dt \\
@@ -112,7 +113,59 @@ $n > 1$のとき,
     \int_\alpha^\beta (x - \alpha)(x - \beta) dx = -\frac{1}{6}(\beta - \alpha)^3,~~ \int_\alpha^\beta (x - \alpha)^2(x - \beta) dx = \frac{1}{12}(\beta - \alpha)^4
 \] \\
 
+\subsection{ガンマ関数との関係}
+ベータ関数とガンマ関数の間には次のような関係が成り立つ.
+\[
+    B(x, y) = \frac{\Gamma(x)\Gamma(y)}{\Gamma(x + y)}
+\] \\
 
+(証明をするにあたって)
+\begin{itemize}
+    \item $1.2,~2.2$での説明から,~$x, y$が正整数であるときに成立することは確認出来る.
+    \item $x, y$が正の実数であるとき,~$\Gamma(x)\Gamma(y) = \Gamma(x + y)B(x, y)$ が成り立つことを(具体的には積分計算する際に極座標に変換する形で)示したい. そのためにまず, ガンマ関数とベータ関数の積分変数を別のものに置き換える. \\
+\end{itemize}
+
+\setcounter{equation}{0}
+(証明) \\
+ガンマ関数
+\[
+    \Gamma(x) = \int_0^\infty t^{x-1}\mathrm{e}^{-t} dt
+\]
+に対し,~積分変数$t$を次のように$r$で置換する. $t = r^2~(r \geq 0)$ \\
+このとき,~$dt = 2rdr$,~$t: 0 \to \infty$で$r: 0 \to \infty$だから
+\begin{equation}
+    \Gamma(x) = \int_0^\infty \mathrm{e}^{-r^2} \cdot r^{2(x-1)} \cdot 2rdr = 2\int_0^\infty \mathrm{e}^{-r^2}r^{2x-1}dr
+    \label{eq:gamma}
+\end{equation}
+また,~ベータ関数
+\[
+    B(x, y) = \int_0^1 t^{x-1}(1-t)^{y-1} dt
+\]
+に対し,~積分変数$t$を次のように$\theta$で置換する. $t = \sin^2\theta$ \\
+このとき,~$dt = 2\sin\theta\cos\theta d\theta$,~$t: 0 \to 1$で$\theta: 0 \to \frac{\pi}{2}$だから
+\begin{eqnarray}
+    B(x, y) 
+    & = & \int_0^\frac{\pi}{2} \sin^{2(x-1)}\theta(1-\sin^2\theta)^{y-1} \cdot 2\sin\theta\cos\theta d\theta \nonumber \\
+    & = & 2 \int_0^\frac{\pi}{2} \sin^{2x-1}\theta\cos^{2y-1}\theta d\theta
+    \label{eq:beta}
+\end{eqnarray}
+
+一方, 式~(\ref{eq:gamma})より,
+\begin{eqnarray*}
+    \Gamma(x)\Gamma(y)
+    & = & 2\int_0^\infty \mathrm{e}^{-u^2}u^{2x-1}du \cdot 2\int_0^\infty \mathrm{e}^{-v^2}v^{2y-1}dv \\
+    & = & 4 \int_0^\infty \int_0^\infty \mathrm{e}^{-(u^2 + v^2)}u^{2x-1}v^{2y-1}dudv
+\end{eqnarray*}
+ここで,~積分変数$u, v$を$r, \theta$で次のように置換する. $u = r\sin\theta,~v = r\cos\theta$ \\
+このときヤコビアンは$r$だから$dudv = rdrd\theta$であり,~$r: 0 \to \infty,~\theta: 0 \to \frac{\pi}{2}$. \\
+よって
+\begin{eqnarray*}
+    \Gamma(x)\Gamma(y)
+    & = & 4 \int_0^\infty \int_0^\frac{\pi}{2} \mathrm{e}^{-r^2(\sin^2\theta + \cos^2\theta)}(r\sin\theta)^{2x-1}(r\cos\theta)^{2y-1}rdrd\theta \\
+    & = & 2 \int_0^\infty \mathrm{e}^{-r^2}r^{2(x+y)-1}dr \cdot 2 \int_0^\frac{\pi}{2} \sin^{2x-1}\theta\cos^{2y-1} d\theta \\
+    & = & \Gamma(x + y)B(x, y) \hspace{15pt} (式~(\ref{eq:gamma}),~(\ref{eq:beta})より) \\\\
+    \therefore B(x, y) & = & \frac{\Gamma(x)\Gamma(y)}{\Gamma(x + y)}
+\end{eqnarray*}
 
 \begin{thebibliography}{9}
     \bibitem{mathtrain-ガンマ}
