@@ -1,10 +1,11 @@
 # Fdb version 3
-["dvipdf"] 1587783533 "report.dvi" "report.pdf" "report" 1587783535
+["dvipdf"] 1587783533 "report.dvi" "report.pdf" "report" 1587784986
   "report.dvi" 1587783533 14492 63fe31ef8e646c15e450633c37b38460 "latex"
   (generated)
   "report.pdf"
-["latex"] 1587783533 "/Users/tdryoji/Documents/Beta-Gamma/report.tex" "report.dvi" "report" 1587783535
+["latex"] 1587783533 "/Users/tdryoji/Documents/scratch_papers/Beta-Gamma/report.tex" "report.dvi" "report" 1587784986
   "/Users/tdryoji/Documents/Beta-Gamma/report.tex" 1587783532 8411 3d0d05a03cf14285bd48b3549f2d96d0 ""
+  "/Users/tdryoji/Documents/scratch_papers/Beta-Gamma/report.tex" 1587783532 8411 3d0d05a03cf14285bd48b3549f2d96d0 ""
   "/usr/local/texlive/2019basic/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/local/texlive/2019basic/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/local/texlive/2019basic/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -150,5 +151,5 @@
   "report.tex" 1587783532 8411 3d0d05a03cf14285bd48b3549f2d96d0 ""
   (generated)
   "report.aux"
-  "report.log"
   "report.dvi"
+  "report.log"
